@@ -1,0 +1,19 @@
+version: 0.2
+
+env:
+  variables:
+    Environment: "dev"
+    TestSuite: "smoke"
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.11
+    commands:
+      - pip install pytest
+
+  build:
+    commands:
+      - echo "Running tests for $Environment"
+      - echo "TestSuite = $TestSuite"
+      - pytest -v
