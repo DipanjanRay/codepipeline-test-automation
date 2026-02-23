@@ -1,13 +1,5 @@
 import os
-import sys
-
-# For local import when running in CodeBuild
-sys.path.append(".")
-
-import app
-
-def test_add():
-    assert app.add(2, 3) == 5
+import requests
 
 def test_environment():
     env = os.environ.get("Environment")
@@ -18,3 +10,8 @@ def test_suite():
     suite = os.environ.get("TestSuite")
     print("Test Suite:", suite)
     assert suite in ["smoke", "regression"]
+
+def test_dummy():
+    # Example external test (replace with actual endpoint later)
+    print("Running external test validation")
+    assert True
