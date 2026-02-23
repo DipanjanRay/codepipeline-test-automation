@@ -1,5 +1,5 @@
 import os
-import requests
+
 
 def test_environment():
     env = os.environ.get("Environment")
