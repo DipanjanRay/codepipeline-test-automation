@@ -9,7 +9,7 @@ def test_environment():
 def test_suite():
     suite = os.environ.get("TestSuite")
     print("Test Suite:", suite)
-    assert suite in ["smoke", "regression"]
+    assert suite in ["regression"]
 
 def test_dummy():
     # Example external test (replace with actual endpoint later)
